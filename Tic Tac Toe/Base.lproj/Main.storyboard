@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,197 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="taw-gO-gRy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wVn-er-rSN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g7B-1U-5Zh" userLabel="Header View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="167"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="pQz-wv-eCV">
+                                                <rect key="frame" x="81.5" y="24" width="212" height="119"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="119" id="VyT-c0-bcK"/>
+                                                    <constraint firstAttribute="width" constant="212" id="tnj-vp-cfg"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pQz-wv-eCV" firstAttribute="centerX" secondItem="g7B-1U-5Zh" secondAttribute="centerX" id="Usq-sW-qVS"/>
+                                            <constraint firstItem="pQz-wv-eCV" firstAttribute="centerY" secondItem="g7B-1U-5Zh" secondAttribute="centerY" id="vwi-oy-cd7"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="492-NX-fNh" userLabel="Center View">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-p0-GmN" userLabel="Rectangles">
+                                                <rect key="frame" x="46.5" y="28.5" width="282" height="276"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yEB-py-O9L">
+                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="86"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cz-2q-eCU">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jPN-wS-RPs"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-GQ-zP0">
+                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSw-iJ-OxJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-YI-Nlj">
+                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BXf-SD-7cv"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-mi-0CQ">
+                                                        <rect key="frame" x="0.0" y="95" width="282" height="86"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-wJ-dZg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OZt-Lb-bX0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-Ow-UMC">
+                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6jQ-Vl-pGk"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-dm-wJh">
+                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNY-2G-2LB"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pLL-HS-Sew">
+                                                        <rect key="frame" x="0.0" y="190" width="282" height="86"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-eA-4gk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Ej-QN-iAm"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azF-QZ-zNu">
+                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cyY-Iz-HPO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dk-ir-FhA">
+                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <size key="titleShadowOffset" width="37" height="16"/>
+                                                                <state key="normal" image="rect_blank"/>
+                                                                <connections>
+                                                                    <action selector="fieldChosen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AMu-ai-49z"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="rsX-p0-GmN" firstAttribute="centerY" secondItem="492-NX-fNh" secondAttribute="centerY" id="hF7-gJ-lrU"/>
+                                            <constraint firstItem="rsX-p0-GmN" firstAttribute="centerX" secondItem="492-NX-fNh" secondAttribute="centerX" id="rB0-0M-vYV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPc-hG-ELu" userLabel="Bottom View">
+                                        <rect key="frame" x="0.0" y="500.5" width="375" height="166.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOm-od-oj6">
+                                                <rect key="frame" x="133.5" y="80" width="108" height="41"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="41" id="Kju-1k-rss"/>
+                                                    <constraint firstAttribute="width" constant="108" id="clC-DF-7ZJ"/>
+                                                </constraints>
+                                                <state key="normal" image="restart_label"/>
+                                                <connections>
+                                                    <action selector="restartGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lva-GA-jjX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="eOm-od-oj6" secondAttribute="bottom" constant="45.5" id="Gaz-K2-woe"/>
+                                            <constraint firstItem="eOm-od-oj6" firstAttribute="centerX" secondItem="JPc-hG-ELu" secondAttribute="centerX" id="Vgc-si-C6q"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="JPc-hG-ELu" firstAttribute="height" secondItem="492-NX-fNh" secondAttribute="height" multiplier="1:2" id="pTN-nQ-Ho3"/>
+                                    <constraint firstItem="492-NX-fNh" firstAttribute="height" secondItem="g7B-1U-5Zh" secondAttribute="height" multiplier="2:1" id="zbO-sM-1b9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wVn-er-rSN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IQ6-SZ-Ade"/>
+                            <constraint firstAttribute="bottom" secondItem="wVn-er-rSN" secondAttribute="bottom" id="Q9n-Pg-LGn"/>
+                            <constraint firstItem="wVn-er-rSN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QWx-w4-Ix2"/>
+                            <constraint firstAttribute="trailing" secondItem="taw-gO-gRy" secondAttribute="trailing" id="fGG-cA-9ld"/>
+                            <constraint firstItem="wVn-er-rSN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hkc-ij-3jS"/>
+                            <constraint firstItem="taw-gO-gRy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jhI-C3-Ptk"/>
+                            <constraint firstItem="wVn-er-rSN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="r6n-zg-jYI"/>
+                            <constraint firstItem="taw-gO-gRy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rDI-AU-8ZU"/>
+                            <constraint firstAttribute="bottom" secondItem="taw-gO-gRy" secondAttribute="bottom" id="sT5-wf-xrR"/>
+                            <constraint firstItem="wVn-er-rSN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uRM-Ub-eL6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outletCollection property="rectangles" destination="9Cz-2q-eCU" collectionClass="NSMutableArray" id="jxJ-Ki-x24"/>
+                        <outletCollection property="rectangles" destination="vsb-GQ-zP0" collectionClass="NSMutableArray" id="1M5-aE-LX8"/>
+                        <outletCollection property="rectangles" destination="Tud-YI-Nlj" collectionClass="NSMutableArray" id="qQm-aR-7Kd"/>
+                        <outletCollection property="rectangles" destination="vKA-wJ-dZg" collectionClass="NSMutableArray" id="hTp-xc-dIp"/>
+                        <outletCollection property="rectangles" destination="NgE-Ow-UMC" collectionClass="NSMutableArray" id="kM9-aH-geD"/>
+                        <outletCollection property="rectangles" destination="xTu-dm-wJh" collectionClass="NSMutableArray" id="ufM-ev-nbY"/>
+                        <outletCollection property="rectangles" destination="aBb-eA-4gk" collectionClass="NSMutableArray" id="zv0-NL-9Vj"/>
+                        <outletCollection property="rectangles" destination="azF-QZ-zNu" collectionClass="NSMutableArray" id="bdL-Ed-6pB"/>
+                        <outletCollection property="rectangles" destination="8Dk-ir-FhA" collectionClass="NSMutableArray" id="TLc-y6-UrF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="375" height="812"/>
+        <image name="logo" width="338" height="181"/>
+        <image name="rect_blank" width="86" height="86"/>
+        <image name="restart_label" width="196" height="75"/>
+    </resources>
 </document>
