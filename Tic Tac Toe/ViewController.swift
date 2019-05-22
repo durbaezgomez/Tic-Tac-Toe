@@ -60,13 +60,15 @@ class ViewController: UIViewController {
     
     func playNextMove(){
         
-        var playedSpot:UInt32
+        var playedSpot:Int
         repeat{
-            playedSpot = arc4random_uniform(9)
-        }while(gameState[Int(playedSpot)] != 0)
+            playedSpot = Int(arc4random_uniform(9))
+//            playedSpot = findBestMove()
+            print(playedSpot)
+        }while(gameState[playedSpot] != 0)
         
-        rectangles[Int(playedSpot)].setImage(UIImage(named: "rect_circle"), for: .normal)
-        gameState[Int(playedSpot)] = 2
+        rectangles[playedSpot].setImage(UIImage(named: "rect_circle"), for: .normal)
+        gameState[playedSpot] = 2
     }
     
     func lookForVictory(){
@@ -144,6 +146,51 @@ class ViewController: UIViewController {
         
         //       TODO: SPRAWDZANIE ZAGROZEN -> ZWROC INDEX DO BLOKADY
         //       TODO: SZUKANIE MOZLIWOSCI WYGRANEJ -> ZWROC INDEX WYGRANEJ
+        
+    }
+    
+    func findBestMove() -> Int{
+        
+        var occupied: [Int] = []
+        var counter: Int
+        
+        for i in 0...2{ // rows
+            counter = 0
+            for j in 0...2{
+                if (gameState[j+i*3] == 2){
+                    counter += 1
+                    occupied.append(j+i*3)
+                }
+                if (counter == 2){
+                    return j+6 - occupied.reduce(0,+)
+                }
+            }
+        }
+        
+        for i in 0...2{ // columns
+            counter = 0
+            for j in 0...2{
+                if (gameState[j*3+i] == 2){
+                    counter += 1
+                    occupied.append(j+i*3)
+                }
+                if (counter == 2){
+                    return i+6 - occupied.reduce(0,+)
+                }
+            }
+        }
+        
+        return Int(arc4random_uniform(9))
+
+        // diagonals
+        counter = 0
+//        let con0:Bool = gameState[0] == 2
+//        let con4:Bool = gameState[4] == 2
+//        let con8:Bool = gameState[8] == 2
+//        let con2:Bool = gameState[2] == 2
+//        let con6:Bool = gameState[6] == 2
+        
+        
         
     }
 

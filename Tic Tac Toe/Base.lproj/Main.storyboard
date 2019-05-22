@@ -44,13 +44,13 @@
                                         <rect key="frame" x="0.0" y="167" width="375" height="333.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rsX-p0-GmN" userLabel="Rectangles">
-                                                <rect key="frame" x="46.5" y="28.5" width="282" height="276"/>
+                                                <rect key="frame" x="151.5" y="124.5" width="72" height="84"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yEB-py-O9L">
-                                                        <rect key="frame" x="0.0" y="0.0" width="282" height="86"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="22"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cz-2q-eCU">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -58,7 +58,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsb-GQ-zP0">
-                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="28" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -66,7 +66,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-YI-Nlj">
-                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="56" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -76,10 +76,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pfn-mi-0CQ">
-                                                        <rect key="frame" x="0.0" y="95" width="282" height="86"/>
+                                                        <rect key="frame" x="0.0" y="31" width="72" height="22"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKA-wJ-dZg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -87,7 +87,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-Ow-UMC">
-                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="28" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -95,7 +95,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTu-dm-wJh">
-                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="56" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -105,10 +105,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="pLL-HS-Sew">
-                                                        <rect key="frame" x="0.0" y="190" width="282" height="86"/>
+                                                        <rect key="frame" x="0.0" y="62" width="72" height="22"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-eA-4gk">
-                                                                <rect key="frame" x="0.0" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -116,7 +116,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azF-QZ-zNu">
-                                                                <rect key="frame" x="98" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="28" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
@@ -124,7 +124,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dk-ir-FhA">
-                                                                <rect key="frame" x="196" y="0.0" width="86" height="86"/>
+                                                                <rect key="frame" x="56" y="0.0" width="16" height="22"/>
                                                                 <size key="titleShadowOffset" width="37" height="16"/>
                                                                 <state key="normal" image="rect_blank"/>
                                                                 <connections>
